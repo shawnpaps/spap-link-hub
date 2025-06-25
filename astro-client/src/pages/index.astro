@@ -1,0 +1,47 @@
+---
+import RootLayout from '../layouts/RootLayout.astro';
+import HeroSection from '../components/HeroSection.tsx';
+import SocialLinks from '../components/SocialLinks.tsx';
+import LinkTree from '../components/LinkTree.tsx';
+import FilmBurns from '../components/FloatingParticles.tsx';
+---
+
+<RootLayout title="Shawn Papineau | Developer • Producer • Photographer">
+	<main
+		class="min-h-screen bg-gradient-to-br from-black via-red-900 to-black relative overflow-hidden"
+	>
+		<!-- Film Burns Background -->
+		<FilmBurns client:load />
+
+		<!-- Main Content -->
+		<div class="relative z-10 container mx-auto px-4 py-8">
+			<div class="max-w-2xl mx-auto space-y-8">
+				<!-- Hero Section -->
+				<HeroSection client:load />
+
+				<!-- Social Links -->
+				<SocialLinks client:load />
+
+				<!-- Link Tree -->
+				<LinkTree client:load />
+			</div>
+		</div>
+
+		<!-- Aggressive Gradient Orbs -->
+		<div
+			class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/30 rounded-full blur-3xl animate-pulse"
+		>
+		</div>
+		<div
+			class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/30 rounded-full blur-3xl animate-pulse delay-1000"
+		>
+		</div>
+
+		<!-- Metal Texture Overlay -->
+		<div
+			class="absolute inset-0 opacity-20"
+			style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"
+		>
+		</div>
+	</main>
+</RootLayout>
